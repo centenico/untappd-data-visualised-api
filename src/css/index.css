@@ -30,3 +30,56 @@ select {
   background-size: 14px 14px;
   background-image: url("data:image/svg+xml,<svg width='24' fill='white' height='24' xmlns='http://www.w3.org/2000/svg'><path d='m0,6l12,12l12,-12l-24,0z'/><path fill='none' d='m0,0l24,0l0,24l-24,0l0,-24z'/></svg>");
 }
+
+@media screen and (max-width: 992px) {
+  body{
+    font-size:0.8rem;
+  }
+  .p-8{
+    padding:1rem;
+  }
+  .p-4{
+    padding:0.5rem;
+  }
+  .text-xl{
+    font-size: 1rem;
+  }
+  .text-2xl{
+    font-size:1rem;
+  }
+  .text-4xl{
+    font-size:1rem;
+  }
+  .text-lg{
+    font-size:1rem;
+  }
+  .gap-4{
+    gap:0.5rem;
+  }
+  .mb-2{
+    margin-bottom:0.25rem;
+  }
+  .mb-4{
+    margin-bottom:0.5rem;
+  }
+  .my-4{
+    margin-top:0.5rem;
+    margin-bottom:0.5rem;
+  }
+  .grid-cols-3{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  div.block > .mb-4{
+    margin-bottom:5px;
+  }
+  .pie-chart, .bar-chart{
+    width:90% !important;
+    height:80% !important;
+  }
+  .leaflet-container{
+    height:250px !important;
+  }
+  .min-h-96{
+    min-height:10rem;
+  }
+}

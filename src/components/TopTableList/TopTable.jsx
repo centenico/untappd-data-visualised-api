@@ -38,7 +38,7 @@ const TopTable = ({ beerData, dataType, scoreType, selfCompare, lowerCase = fals
       <ul className="divide-y divide-gray-700">
         {processedList.length > 0 ? (
           processedList.map((item, i) => (
-            <li key={i} className="py-2">
+            <li key={i} className="py-1">
               <div
                 className={`flex items-center justify-between  ${lowerCase && 'lowercase'}`}
               >

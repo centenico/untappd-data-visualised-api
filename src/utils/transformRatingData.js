@@ -2,6 +2,8 @@
 export const transformRatingData = (beerData, scoreType) => {
   return beerData.map((item) => ({
     name: `${item.beer_name}, ${item.brewery_name}`,
+    brewery: item.brewery_name,
+    style: item.beer_type,
     bid: +item.bid,
     value: +item[scoreType],
     url: item.checkin_url,

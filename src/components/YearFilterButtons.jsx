@@ -26,7 +26,7 @@ const YearFilterButtons = ({ beerData, filterDateRange, setFilterDateRange }) =>
             })
           }
         >
-          all time
+          all
         </button>
       </div>
       {uniqueYears.map((year, i) => (

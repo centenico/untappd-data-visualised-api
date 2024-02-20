@@ -38,7 +38,7 @@ const Overview = ({ beerData }) => {
                   href={item.checkin_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 block bg-gray-800 min-h-96 rounded-lg bg-opacity-50"
+                  className="p-4 block bg-gray-800 min-h-80 rounded-lg bg-opacity-50"
                 >
                   <h2 className="text-xl text-white font-semibold mb-2">
                     {item.beer_name}
@@ -66,11 +66,6 @@ const Overview = ({ beerData }) => {
                     icon="STAR"
                     viewBox="0 0 512 512"
                     value={item.rating_score}
-                  />
-                  <OverviewCardPropery
-                    icon="STAR"
-                    viewBox="0 0 512 512"
-                    value={item.global_rating_score}
                   />
                 </a>
               </div>
