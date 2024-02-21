@@ -15,13 +15,13 @@ const YearFilterButtons = ({ beerData, filterDateRange, setFilterDateRange }) =>
         <button
           key="set-all-time"
           className={`shadow w-full border rounded py-2 px-3 mb-4 ${
-            filterDateRange?.start.startsWith(`${uniqueDates[0]}`)
+            filterDateRange?.start.startsWith(`${uniqueDates[uniqueDates.length-1]}`)
               ? 'bg-white text-gray-900'
               : 'text-white bg-gray-900'
           }`}
           onClick={() =>
             setFilterDateRange({
-              start: `${uniqueDates[0]}`,
+              start: `${uniqueDates[uniqueDates.length-1]}`,
               end: new Date().toISOString().split('T')[0],
             })
           }
