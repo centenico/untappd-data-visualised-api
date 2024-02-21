@@ -12,13 +12,6 @@ const TopTableList = ({ beerData }) => {
     },
     {
       dataType: 'topBeers',
-      scoreType: 'global_weighted_rating_score',
-      key: 'topBeersGloalRatingScore',
-      title: 'Top 10 rated beers (global / you (diff))',
-      selfCompare: true,
-    },
-    {
-      dataType: 'topBeers',
       scoreType: 'beer_abv',
       key: 'topBeersAbv',
       title: 'Top 10 strongest beers',
@@ -28,23 +21,6 @@ const TopTableList = ({ beerData }) => {
       scoreType: 'total_toasts',
       key: 'topBeersTotalToasts',
       title: 'Top 10 toasts',
-    },
-    {
-      dataType: 'topBeers',
-      scoreType: 'total_comments',
-      key: 'TopBeersTotalComments',
-      title: 'Top 10 comments',
-    },
-    {
-      dataType: 'flavorProfiles',
-      lowerCase: true,
-      key: 'flavorProfiles',
-      title: 'Top flavour profiles',
-    },
-    {
-      dataType: 'friends',
-      key: 'friends',
-      title: 'Tagged friends',
     },
     {
       dataType: 'topByRating',
