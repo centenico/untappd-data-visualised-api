@@ -17,7 +17,8 @@ const Overview = ({ beerData }) => {
     }
   };
 
-  const paginatedData = beerData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+  let paginatedData = beerData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+  paginatedData = paginatedData.reverse();
 
   return (
     <>
