@@ -8,7 +8,9 @@ const YearFilterButtons = ({ beerData, filterDateRange, setFilterDateRange }) =>
       beerData.map((item) => new Date(item.created_at).toISOString().slice(0, 10))
     ),
   ];
-  const currDate = new Date().toISOString().split('T')[0];
+  let currDate = new Date();
+  currDate.setDate(currDate.getDate() + 1);
+  currDate = currDate.toISOString().split('T')[0];
 
   return (
     <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-none lg:grid-flow-col gap-4 my-4">

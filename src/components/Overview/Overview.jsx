@@ -2,6 +2,13 @@ import { useState } from 'react';
 import OverviewCardPropery from '../Overview/OverviewCardPropery.jsx';
 
 const Overview = ({ beerData }) => {
+
+
+  //reverse beerData by date
+  beerData = beerData.sort((a, b) => {
+    return new Date(b.created_at) - new Date(a.created_at);
+  });
+
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 50;
 
@@ -18,7 +25,6 @@ const Overview = ({ beerData }) => {
   };
 
   let paginatedData = beerData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
-  paginatedData = paginatedData.reverse();
 
   return (
     <>
