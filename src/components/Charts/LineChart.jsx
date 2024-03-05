@@ -26,7 +26,8 @@ const LineChart = ({ beerData }) => {
   // Extract years and calculate cumulative counts per year
   const peroidCounts = {};
   let cumulativeCount = 0;
-  beerData.forEach((beer) => {
+  let orderedBeerData = beerData.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
+  orderedBeerData.forEach((beer) => {
     const year = new Date(beer.created_at).getFullYear();
     cumulativeCount += 1; // Increment cumulative count
     peroidCounts[year] = cumulativeCount;
