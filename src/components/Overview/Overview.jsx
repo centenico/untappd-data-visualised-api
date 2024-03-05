@@ -28,7 +28,7 @@ const Overview = ({ beerData }) => {
 
   return (
     <>
-      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 mt-8">
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 mt-8 ">
         {paginatedData?.length > 0 &&
           paginatedData.map((item) => (
             <div
@@ -36,7 +36,7 @@ const Overview = ({ beerData }) => {
               style={{
                 backgroundImage: `url(${item.photo_url})`,
               }}
-              className="block shadow-md bg-cover transition-transform duration-300 transform hover:scale-110 rounded-lg overflow-hidden"
+              className={`block shadow-md transition-transform duration-300 transform hover:scale-110 rounded-lg overflow-hidden ${item.photo_url ? 'bg-cover' : 'gray-800'}`}
             >
               <a
                 href={item.checkin_url}

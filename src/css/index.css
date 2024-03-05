@@ -82,6 +82,12 @@ select {
   .min-h-96{
     min-height:10rem;
   }
+  .gray-800{
+    height:180px;
+  }
+  .gray-800 > .p-4{
+    padding-left:15px;
+  }
 }
 
 .leaflet-layer,
