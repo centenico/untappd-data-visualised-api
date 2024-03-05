@@ -10,16 +10,16 @@ const BarChartList = ({ beerData }) => {
       trailing_char: '%',
     },
     {
-      title: 'Beer IBU',
-      name: 'beer_ibu',
+      title: 'Beers per day',
+      name: 'beers_per_day',
+    },
+    {
+      title: 'Beers per month',
+      name: 'beers_per_month',
     },
     {
       title: 'Beers per year',
       name: 'beers_per_year',
-    },
-    {
-      title: 'Beers per day',
-      name: 'beers_per_day',
     },
     {
       title: 'Rating scores',
@@ -46,11 +46,13 @@ const BarChartList = ({ beerData }) => {
         onChange={(e) => setSelectedBarChartData(e.target.value)}
       >
         {beerData.length > 1 &&
-          barChartList.map((item) => (
-            <option key={item.name} value={item.name}>
-              {item.title}
-            </option>
-          ))}
+          barChartList.map((item) => {
+            return (
+              <option key={item.name} value={item.name}>
+                {item.title}
+              </option>
+            );
+          })}
       </select>
       <BarChart
         dataType={selectedBarChartData}
